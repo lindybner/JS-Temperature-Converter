@@ -5,5 +5,12 @@ window.onload = () => {
   const btnConvert = document.getElementById("btn-convert");
 
   // EVENT LISTENERS
-  btnConvert.addEventListener("click", () => {});
+  btnConvert.addEventListener("click", (event) => {
+    // prevent default
+    event.preventDefault();
+
+    // gather input
+    let temperature = parseFloat(temp.value);
+    let tempUnit = unit.value;
+  });
 };
