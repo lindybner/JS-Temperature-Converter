@@ -5,8 +5,10 @@ window.onload = () => {
   const btnConvert = document.getElementById("btn-convert");
   const result = document.getElementById("result");
 
-  // EVENT LISTENERS
-  btnConvert.addEventListener("click", (event) => {
+  // FUNCTIONS
+
+  // convert temperature
+  const tempConvert = (event) => {
     // prevent default
     event.preventDefault();
 
@@ -24,8 +26,8 @@ window.onload = () => {
       tempValue = (tempValue / 5) * 9 + 32;
       result.innerHTML = `${tempValue} &deg;F.`;
     }
+  };
 
-    // unhide result
-    result.classList.remove("hide-element");
-  });
+  // EVENT LISTENERS
+  btnConvert.addEventListener("click", tempConvert);
 };
