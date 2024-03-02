@@ -18,11 +18,11 @@ window.onload = () => {
     if (unitValue === "f") {
       // if input is in fahrenheit
       tempValue = ((tempValue - 32) / 9) * 5;
-      result.innerHTML = `${tempValue} &deg; C.`;
+      result.innerHTML = `${tempValue} &deg;C.`;
     } else {
       // if input is in celcius
       tempValue = (tempValue / 5) * 9 + 32;
-      result.innerHTML = `${tempValue} &deg; F.`;
+      result.innerHTML = `${tempValue} &deg;F.`;
     }
 
     // unhide result
