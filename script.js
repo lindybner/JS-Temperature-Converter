@@ -4,6 +4,7 @@ window.onload = () => {
   const unitInput = document.getElementById("unit");
   const btnConvert = document.getElementById("btn-convert");
   const result = document.getElementById("result");
+  let tempValueConvert;
 
   // FUNCTIONS
 
@@ -19,12 +20,12 @@ window.onload = () => {
     // conversion calculations
     if (unitValue === "f") {
       // if input is in fahrenheit
-      tempValue = ((tempValue - 32) / 9) * 5;
-      result.innerHTML = `${tempValue} &deg;C.`;
+      tempValueConvert = ((tempValue - 32) / 9) * 5;
+      result.innerHTML = `${tempValue} &deg;F is ${tempValueConvert} &deg;C.`;
     } else {
       // if input is in celcius
-      tempValue = (tempValue / 5) * 9 + 32;
-      result.innerHTML = `${tempValue} &deg;F.`;
+      tempValueConvert = (tempValue / 5) * 9 + 32;
+      result.innerHTML = `${tempValue} &deg;C is ${tempValueConvert} &deg;F.`;
     }
   };
 
