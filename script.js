@@ -36,8 +36,6 @@ window.onload = () => {
     // gather input
     let tempValue = parseFloat(tempInput.value);
     let unitValue = unitInput.value;
-    console.log(tempValue);
-    console.log(unitValue);
 
     // call conversion() & display result
     result.innerHTML = conversion(tempValue, unitValue);
