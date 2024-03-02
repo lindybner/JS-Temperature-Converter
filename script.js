@@ -24,5 +24,8 @@ window.onload = () => {
       tempValue = (tempValue / 5) * 9 + 32;
       result.innerHTML = `${tempValue} &deg; F.`;
     }
+
+    // unhide result
+    result.classList.remove("hide-element");
   });
 };
