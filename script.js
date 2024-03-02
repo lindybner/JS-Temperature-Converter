@@ -1,7 +1,7 @@
 window.onload = () => {
   // VARIABLES
-  const temp = document.getElementById("temp");
-  const unit = document.getElementById("unit");
+  const tempInput = document.getElementById("temp");
+  const unitInput = document.getElementById("unit");
   const btnConvert = document.getElementById("btn-convert");
   const result = document.getElementById("result");
 
@@ -11,12 +11,18 @@ window.onload = () => {
     event.preventDefault();
 
     // gather input
-    let temperature = parseFloat(temp.value);
-    let tempUnit = unit.value;
+    let tempValue = parseFloat(tempInput.value);
+    let unitValue = unitInput.value;
 
-    // convert calculations if input is in fahrenheit
-    if (tempUnit === "f") {
-      temperature = ((temperature - 32) / 9) * 5;
+    // conversion calculations
+    if (unitValue === "f") {
+      // if input is in fahrenheit
+      tempValue = ((tempValue - 32) / 9) * 5;
+      result.innerHTML = `${tempValue} &deg; C.`;
+    } else {
+      // if input is in celcius
+      tempValue = (tempValue / 5) * 9 + 32;
+      result.innerHTML = `${tempValue} &deg; F.`;
     }
   });
 };
