@@ -15,8 +15,8 @@ This is a simple JavaScript program to convert temperatures between Celsius and 
 
 The conversion formula used in this program is:
 
-- Celsius to Fahrenheit: `(°C × 9/5) + 32`
-- Fahrenheit to Celsius: `(°F - 32) × 5/9`
+- Celsius to Fahrenheit: `(°C × 9 / 5) + 32`
+- Fahrenheit to Celsius: `(°F - 32) × 5 / 9`
 
 ## Files
 
