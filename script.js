@@ -45,6 +45,7 @@ window.onload = () => {
     display(conversion(tempValue, unitValue));
   };
 
-  // EVENT LISTENERS
+  // EVENT LISTENER
+  // click on "convert" btn
   btnConvert.addEventListener("click", clickBtnConvert);
 };
