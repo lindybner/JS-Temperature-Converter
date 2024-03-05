@@ -15,11 +15,12 @@ window.onload = () => {
 
   // FUNCTIONS
 
-  // conversion calculations & output
-  const output = (converted) => {
+  // display result
+  const display = (converted) => {
     result.innerHTML = converted;
   };
 
+  // conversion calculations
   const conversion = (tempValue, unitValue) => {
     if (unitValue === "f") {
       // if input is in fahrenheit
@@ -41,8 +42,8 @@ window.onload = () => {
     tempValue = parseFloat(tempInput.value);
     unitValue = unitInput.value;
 
-    // call conversion() to convert & output() to display result
-    output(conversion(tempValue, unitValue));
+    // call conversion() to convert & display() to display result
+    display(conversion(tempValue, unitValue));
   };
 
   // EVENT LISTENERS
