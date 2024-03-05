@@ -24,11 +24,11 @@ window.onload = () => {
     if (unitValue === "f") {
       // if input is in fahrenheit
       convertedTempValue = ((tempValue - 32) / 9) * 5;
-      return `${tempValue}&deg;F is ${convertedTempValue}&deg;C.`;
+      return `${tempValue}&deg;F is <strong>${convertedTempValue}&deg;C.</strong>`;
     } else {
       // if input is in celcius
       convertedTempValue = (tempValue / 5) * 9 + 32;
-      return `${tempValue}&deg;C is ${convertedTempValue}&deg;F.`;
+      return `${tempValue}&deg;C is <strong>${convertedTempValue}&deg;F.</strong>`;
     }
   };
 
