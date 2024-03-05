@@ -20,7 +20,7 @@ window.onload = () => {
     result.innerHTML = converted;
   };
 
-  const conversion = (tempValue, unitValue, convertedTempValue) => {
+  const conversion = (tempValue, unitValue) => {
     if (unitValue === "f") {
       // if input is in fahrenheit
       convertedTempValue = ((tempValue - 32) / 9) * 5;
