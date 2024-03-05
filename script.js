@@ -9,14 +9,18 @@ window.onload = () => {
   const unitInput = document.getElementById("unit");
   const btnConvert = document.getElementById("btn-convert");
   const result = document.getElementById("result");
+  let tempValue;
+  let unitValue;
+  let convertedTempValue;
 
   // FUNCTIONS
 
   // conversion calculations & output
-  const conversion = (tempValue, unitValue) => {
-    // var
-    let convertedTempValue;
+  const output = (converted) => {
+    result.innerHTML = converted;
+  };
 
+  const conversion = (tempValue, unitValue, convertedTempValue) => {
     if (unitValue === "f") {
       // if input is in fahrenheit
       convertedTempValue = ((tempValue - 32) / 9) * 5;
@@ -34,11 +38,12 @@ window.onload = () => {
     event.preventDefault();
 
     // gather input
-    let tempValue = parseFloat(tempInput.value);
-    let unitValue = unitInput.value;
+    tempValue = parseFloat(tempInput.value);
+    unitValue = unitInput.value;
 
-    // call conversion() & display result
-    result.innerHTML = conversion(tempValue, unitValue);
+    // call conversion() & output() to convert & display result
+    convertedTempValue = conversion(tempValue, unitValue);
+    output(convertedTempValue);
   };
 
   // EVENT LISTENERS
