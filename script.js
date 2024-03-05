@@ -41,9 +41,8 @@ window.onload = () => {
     tempValue = parseFloat(tempInput.value);
     unitValue = unitInput.value;
 
-    // call conversion() & output() to convert & display result
-    convertedTempValue = conversion(tempValue, unitValue);
-    output(convertedTempValue);
+    // call conversion() to convert & output() to display result
+    output(conversion(tempValue, unitValue));
   };
 
   // EVENT LISTENERS
