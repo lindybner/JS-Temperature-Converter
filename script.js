@@ -14,7 +14,6 @@ window.onload = () => {
   let convertedTempValue;
 
   // FUNCTIONS
-
   // display result
   const display = (converted) => {
     result.innerHTML = converted;
